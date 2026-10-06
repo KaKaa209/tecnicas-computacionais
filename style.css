@@ -1,43 +1,72 @@
-:root{
-    --cor-fundo: #01080E ;
-    --cor-principal: #0B0D20 ;
-    --cor-secundaria: #212333; 
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #D7F9FF;
-
+:root {
+  --cor-fundo: #000000;
+  --cor-principal: #215f50;
+  --cor-secundaria: #030005;
+  --cor-destaque: #18f5ea;
+  --cor-texto: #fafafa;
 }
 
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.caixa-principal{
-    background-color: var(--cor-principal);
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    padding: 20px;
+.caixa-principal {
+  background-color: var(--cor-principal);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(85, 25, 153, 0.2);
 }
 
-h1{
-    color: var(--cor-destaque);
+h1, .caixa-perguntas, .caixa-resultado {
+  font-family: 'Chakra Petch', sans-serif;
+  margin-bottom: 20px;
+}
+
+.caixa-alternativas {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 button {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    transition: background-color 0.3s;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-button:hover{
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
+button:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto);
+  border-color: var(--cor-texto);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.caixa-resultado {
+  display: none;
+}
+
+.caixa-resultado.mostrar {
+  display: block;
 }
